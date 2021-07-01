@@ -146,7 +146,46 @@ namespace CalculadoraLS
                total = x1 * x2;
                Console.Write("El valor es: " + total);
              }
-                
+                else if (menu == 4)
+                {
+                    Console.WriteLine("División");
+                    while (estado)
+                    {
+                        Console.WriteLine("Dato 1: ");
+                        try
+                        {
+                            x1 = int.Parse(Console.ReadLine());
+                            estado = false;
+                        }
+                        catch
+                        {
+                            Console.WriteLine("Error formato incompleto");
+                        }
+                    }
+                    estado = true;
+                    while (estado)
+                    {
+                        Console.WriteLine("Dato 2: ");
+                        try
+                        {
+                            x2 = int.Parse(Console.ReadLine());
+                            estado = false;
+                        }
+                        catch
+                        {
+                            Console.WriteLine("Error formato incompleto");
+                        }
+                    }
+                    estado = true;
+                    Console.Clear();
+                    total = x1 / x2;
+                    Console.Write("El valor es: " + total);
+                }
+                else
+                {
+                    op = 'n';
+                }
+                Console.ReadKey();     
             }
         }
     }
